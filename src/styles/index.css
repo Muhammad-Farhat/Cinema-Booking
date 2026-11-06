@@ -14,6 +14,7 @@
   --color-text-muted: #a1a1aa;
 
   --color-accent: #e11d2e;
+  --color-accent-hover: #c01525;
   --color-accent-soft: rgba(225, 29, 46, 0.15);
 
   --font-sans: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -114,6 +115,41 @@ a {
 
 .page-subtitle {
   color: var(--color-text-muted);
+}
+
+/* Hides text on screen but keeps it available to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* ---------- Shared buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
 }
 
 /* ---------- Smaller screens ---------- */

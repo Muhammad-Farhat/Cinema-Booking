@@ -1,0 +1,16 @@
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: var(--color-surface-raised);
+}
+
+.movie-poster-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-align: center;
+}

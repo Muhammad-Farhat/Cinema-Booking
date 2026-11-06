@@ -1,0 +1,10 @@
+.empty-state {
+  padding: 3rem 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.empty-state p {
+  color: var(--color-text-muted);
+}
