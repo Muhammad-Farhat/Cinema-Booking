@@ -40,10 +40,6 @@
   font-weight: 700;
 }
 
-.seat-summary-button {
-  width: 100%;
-}
-
 .seat-summary-error {
   margin: 0.75rem 0 0;
   color: var(--color-error);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import EmptyState from '../components/EmptyState.jsx'
+import PaymentForm from '../components/PaymentForm.jsx'
 import SeatGrid from '../components/SeatGrid.jsx'
 import { getOccupiedSeats } from '../data/occupiedSeats.js'
 import { findShowtime } from '../data/showtimes.js'
@@ -55,9 +56,15 @@ function SeatSelection() {
   // Mock occupied seats plus seats from bookings saved in this browser
   const occupiedSeats = [...getOccupiedSeats(showtime.id), ...getBookedSeats(showtime.id)]
 
-  function handleConfirm() {
+  // Runs every time the payment form is submitted
+  function handlePaymentSubmit(isPaymentValid) {
     if (!hasSeats) {
       setErrorMessage('Please select at least one seat.')
+      return
+    }
+
+    // The payment form already shows its own error under each field
+    if (!isPaymentValid) {
       return
     }
 
@@ -129,13 +136,7 @@ function SeatSelection() {
             </p>
           </div>
 
-          <button
-            type="button"
-            className="btn btn-primary seat-summary-button"
-            onClick={handleConfirm}
-          >
-            Confirm Booking
-          </button>
+          <PaymentForm total={calculateTotal(sortedSeats)} onSubmit={handlePaymentSubmit} />
 
           {errorMessage && (
             <p className="seat-summary-error" role="alert">
