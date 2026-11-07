@@ -17,6 +17,12 @@
   --color-accent-hover: #c01525;
   --color-accent-soft: rgba(225, 29, 46, 0.15);
 
+  --color-premium: #d4a017;
+  --color-premium-soft: rgba(212, 160, 23, 0.18);
+  --color-error: #ff6b78;
+  --color-success: #4ade80;
+  --color-success-soft: rgba(74, 222, 128, 0.12);
+
   --font-sans: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   --radius: 8px;
@@ -148,8 +154,23 @@ a {
   color: #fff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover:not(:disabled) {
   background-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* ---------- Smaller screens ---------- */

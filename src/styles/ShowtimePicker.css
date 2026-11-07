@@ -1,0 +1,63 @@
+.showtime-picker {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.showtime-picker-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  padding: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.showtime-picker-select {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.showtime-picker-group {
+  margin: 1.25rem 0;
+  padding: 0;
+  border: none;
+}
+
+.showtime-picker-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.showtime-option {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.showtime-option:hover {
+  border-color: var(--color-accent);
+}
+
+.showtime-option.active {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: #fff;
+}

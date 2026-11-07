@@ -1,0 +1,15 @@
+.booking-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.25rem;
+  margin: 0;
+}
+
+.booking-details dt {
+  color: var(--color-text-muted);
+}
+
+.booking-details dd {
+  margin: 0;
+  font-weight: 600;
+}

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router'
 import EmptyState from '../components/EmptyState.jsx'
 import MoviePoster from '../components/MoviePoster.jsx'
+import ShowtimePicker from '../components/ShowtimePicker.jsx'
 import { movies } from '../data/movies.js'
 import { formatDuration } from '../utils/formatDuration.js'
 import '../styles/MovieDetails.css'
@@ -57,7 +58,7 @@ function MovieDetails() {
           </ul>
 
           <p>{movie.overview}</p>
-          <p className="page-subtitle">Showtime selection will appear here in Phase 4.</p>
+          <ShowtimePicker movieId={movie.id} />
         </div>
       </div>
     </section>

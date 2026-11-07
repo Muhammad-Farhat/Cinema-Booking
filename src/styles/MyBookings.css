@@ -1,0 +1,56 @@
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.booking-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+/* With no poster, the details take the full width */
+.booking-card > :only-child {
+  grid-column: 1 / -1;
+}
+
+.booking-card-poster {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.booking-card-reference {
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.booking-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .booking-card {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .booking-card-actions .btn {
+    flex: 1;
+    text-align: center;
+  }
+}

@@ -1,0 +1,68 @@
+.confirmation {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.confirmation-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background-color: var(--color-success-soft);
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.confirmation-ticket {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+/* With no poster, the details take the full width */
+.confirmation-ticket > :only-child {
+  grid-column: 1 / -1;
+}
+
+.confirmation-poster {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.confirmation-reference-label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.confirmation-reference {
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .confirmation-ticket {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .confirmation-poster {
+    max-width: 140px;
+  }
+}
