@@ -28,6 +28,7 @@ function SeatSelection() {
       <EmptyState
         title="Showing not found"
         message="This showing doesn't exist or is no longer available."
+        isPageTitle
       >
         <Link to="/" className="btn btn-primary">
           Back to movies

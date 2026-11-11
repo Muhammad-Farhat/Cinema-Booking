@@ -16,6 +16,8 @@
   --color-accent: #e11d2e;
   --color-accent-hover: #c01525;
   --color-accent-soft: rgba(225, 29, 46, 0.15);
+  /* Lighter red for small text, so it's easy to read on the dark background */
+  --color-accent-text: #ff4d5e;
 
   --color-premium: #d4a017;
   --color-premium-soft: rgba(212, 160, 23, 0.18);

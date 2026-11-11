@@ -21,6 +21,7 @@ function Confirmation() {
       <EmptyState
         title="Booking not found"
         message="We couldn't find a booking with this reference. It may have been cancelled."
+        isPageTitle
       >
         <Link to="/my-bookings" className="btn btn-primary">
           View my bookings

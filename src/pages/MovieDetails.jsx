@@ -19,7 +19,11 @@ function MovieDetails() {
 
   if (!movie) {
     return (
-      <EmptyState title="Movie not found" message="We couldn't find the movie you're looking for.">
+      <EmptyState
+        title="Movie not found"
+        message="We couldn't find the movie you're looking for."
+        isPageTitle
+      >
         <Link to="/" className="btn btn-primary">
           Back to movies
         </Link>

@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.empty-state h1,
+.empty-state h2 {
+  font-size: 1.5rem;
+}
+
 .empty-state p {
   color: var(--color-text-muted);
 }

@@ -1,10 +1,12 @@
+/* max-width stops the seats from growing huge on wide screens */
 .seat-map {
+  max-width: 520px;
+  margin: 0 auto;
   overflow-x: auto;
   padding: 0.25rem;
 }
 
 .seat-screen {
-  min-width: 320px;
   margin-bottom: 1.5rem;
   padding: 0.3rem;
   border-top: 3px solid var(--color-text-muted);
@@ -18,10 +20,9 @@
 
 .seat-row {
   display: grid;
-  grid-template-columns: 1.25rem repeat(10, minmax(26px, 1fr));
+  grid-template-columns: 1.25rem repeat(10, minmax(22px, 1fr));
   gap: 0.25rem;
   align-items: center;
-  min-width: 320px;
   margin-bottom: 0.25rem;
 }
 
@@ -79,8 +80,10 @@
 .seat-legend {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem 1.25rem;
-  margin: 1.25rem 0 0;
+  max-width: 520px;
+  margin: 1.25rem auto 0;
   padding: 0;
   color: var(--color-text-muted);
   font-size: 0.875rem;
