@@ -1,31 +1,19 @@
-import { Link, NavLink } from 'react-router'
-import '../styles/Navbar.css'
+import { Link } from 'react-router'
+import { createShowtimeId } from '../data/showtimes.js'
+import { getNextSevenDays } from '../utils/dates.js'
 
 function Navbar() {
-  return (
-    <header className="navbar">
-      <div className="navbar-inner">
-        <Link to="/" className="navbar-logo">
-          Cina<span className="navbar-logo-accent">verse</span>
-        </Link>
+  const tomorrow = getNextSevenDays()[1].value
+  const seatsLink = `/showtimes/${createShowtimeId('inception', 'downtown', tomorrow, '19:30')}/seats`
 
-        <nav aria-label="Main navigation">
-          <ul className="navbar-links">
-            <li>
-              {/* "end" makes this link active only on "/" itself, not on every page */}
-              <NavLink to="/" end className="navbar-link">
-                Movies
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/my-bookings" className="navbar-link">
-                My Bookings
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  return (
+    <nav>
+      <Link to="/">Home</Link> |{' '}
+      <Link to="/movies/inception">Movie Details</Link> |{' '}
+      <Link to={seatsLink}>Seat Selection</Link> |{' '}
+      <Link to="/confirmation/example">Confirmation</Link> |{' '}
+      <Link to="/my-bookings">My Bookings</Link>
+    </nav>
   )
 }
 
